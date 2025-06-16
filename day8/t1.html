@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .holy-grail{
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "sidebar main main"
+                "footer footer footer";
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 80px 1fr 100px;
+            gap: 10px;
+            height: 100vh;
+        }
+        header{grid-area: header;}
+        aside{grid-area: sidebar;}
+        main{grid-area: main;}
+        footer{grid-area:footer;}
+    </style>
+</head>
+<body>
+    <div class="holy-grail">
+        <header>Header</header>
+        <aside>Sidebar</aside>
+        <main>Main Content</main>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
