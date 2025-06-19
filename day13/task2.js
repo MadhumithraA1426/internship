@@ -1,0 +1,12 @@
+const arr1=[1,2,3,4,5];
+const arr2=[6,7,8,9,10];
+console.log(arr1.concat(arr2));
+let slicearr1=arr1.slice(1,3);
+console.log(slicearr1);
+let arr3=[9,4,7,2,5];
+arr3.sort((a,b)=>a-b);
+console.log(arr3);
+let includeItem=arr3.includes(7);
+console.log(includeItem);
+let indexOfItem=arr3.indexOf(5);
+console.log(indexOfItem);
