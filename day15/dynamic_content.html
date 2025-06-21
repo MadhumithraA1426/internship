@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Dynamic Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    .content {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" onclick="loadContent(1)">Home</a>
+    <a href="#" onclick="loadContent(2)">About</a>
+    <a href="#" onclick="loadContent(3)">Services</a>
+    <a href="#" onclick="loadContent(4)">Portfolio</a>
+    <a href="#" onclick="loadContent(5)">Contact</a>
+  </nav>
+
+  <div class="content">
+    <h1 id="mainTitle"></h1>
+    <p id="mainPara"></p>
+    <h2 id="subTitle1"></h2>
+    <p id="subPara1"></p>
+    <h2 id="subTitle2"></h2>
+    <p id="subPara2"></p>
+  </div>
+
+  <script>
+    function loadContent(page) {
+      const title = document.getElementById("mainTitle");
+      const para = document.getElementById("mainPara");
+      const sub1 = document.getElementById("subTitle1");
+      const para1 = document.getElementById("subPara1");
+      const sub2 = document.getElementById("subTitle2");
+      const para2 = document.getElementById("subPara2");
+
+      if (page === 1) {
+        title.textContent = "Welcome to Our Website";
+        para.textContent = "This is the homepage with a simple introduction.";
+        sub1.textContent = "Features";
+        para1.textContent = "Fast, responsive, and user-friendly UI.";
+        sub2.textContent = "Get Started";
+        para2.textContent = "Use the nav bar to explore more.";
+      } else if (page === 2) {
+        title.textContent = "About Us";
+        para.textContent = "We are a passionate web development team.";
+        sub1.textContent = "Our Mission";
+        para1.textContent = "To build clean and accessible websites.";
+        sub2.textContent = "Our Vision";
+        para2.textContent = "Creating a better web experience for everyone.";
+      } else if (page === 3) {
+        title.textContent = "Our Services";
+        para.textContent = "We offer various digital services.";
+        sub1.textContent = "Web Design";
+        para1.textContent = "Creating elegant, responsive websites.";
+        sub2.textContent = "App Development";
+        para2.textContent = "Custom mobile and desktop apps.";
+      } else if (page === 4) {
+        title.textContent = "Our Portfolio";
+        para.textContent = "Here are some of our featured works.";
+        sub1.textContent = "E-commerce Sites";
+        para1.textContent = "Modern shopping platforms built with performance in mind.";
+        sub2.textContent = "Business Sites";
+        para2.textContent = "Showcase your brand with custom solutions.";
+      } else if (page === 5) {
+        title.textContent = "Contact Us";
+        para.textContent = "We'd love to hear from you!";
+        sub1.textContent = "Email";
+        para1.textContent = "contact@example.com";
+        sub2.textContent = "Phone";
+        para2.textContent = "+91 98765 43210";
+      }
+    }
+
+    // Load default content
+    loadContent(1);
+  </script>
+
+</body>
+</html>

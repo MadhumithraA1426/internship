@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First Page</h2>
+
+<p id="demo"></p>
+<p>One</p>
+<p>Two</p>
+<div class="box">Hi</div>
+<div id="a">Hi</div>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello World!";
+let allParas=document.getElementsByTagName("p");
+allParas[1].innerHTML="Updated text";
+document.querySelector(".box").style.color="red";
+document.querySelector("#a").style.color="blue";
+</script>
+
+</body>
+</html>
