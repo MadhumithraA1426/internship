@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .light {
+            background: white;
+            color: black;
+        }
+
+        .dark {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="themeToggle">Toggle Theme</button>
+    <div id="main">Some content</div>
+    <script>
+    const main = document.getElementById("main");
+    const button = document.getElementById("themeToggle");
+
+    button.addEventListener("click", function () {
+        if (main.classList.contains("light")) {
+            main.classList.remove("light");
+            main.classList.add("dark");
+        } else {
+            main.classList.remove("dark");
+            main.classList.add("light");
+        }
+    });
+    main.classList.add("light");
+</script>
+</body>
+
+</html>
